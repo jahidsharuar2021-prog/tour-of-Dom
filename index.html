@@ -18,14 +18,19 @@
    <header>
     <h1>This is my header no banner</h1>
    </header> 
-   <main>
+   <main id="section-1">
     <h1>welcome to Dom</h1>
+    <p>Lorem ipsum dolor sit amet <span>Jahid hasan</span>consectetur, adipisicing elit. Repudiandae, eum.</p>
+    <p>I am not a good man <span>So aboide me</span></p>
     <ul>
         <li>Shafayet</li>
         <li>bonobash</li>
         <li>jalali set</li>
     </ul>
-    <section>
+    </main>
+
+    <section id="section-2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, illo?</p>
         <h1 id="food-title">Foods I loves</h1>
         <ul id="listband">Rice</ul>
         <ul>potato</ul>
@@ -34,7 +39,7 @@
         <ul class="foreign">burger</ul>
         <ul class="foreign">pizza</ul>
     </section>
-   </main>
+   
    <script>
     // console.log("Hello bole sole gelo ar ailo na");
     // console.log("Javascript ar kela sure hoye gelo");\
@@ -61,12 +66,20 @@
     // for(const food of food){
     //     console.log(food);
     // }
-    listband.innerText='pulao';
+    // listband.innerText='pulao';
     const foreigncls=document.getElementsByClassName('foreign');
     console.log(foreigncls);
     for(const foreignclasses of foreigncls){
         console.log(foreignclasses.innerText);
     }
+    const sectionpart=document.querySelectorAll('#section-1 p span');
+    console.log(sectionpart);
+    for(const sect of sectionpart){
+        console.log(sect.innerText);
+    }
+    const sectionp=document.querySelector('#section-1 p span');
+    console.log(sectionp);
+   
    </script>
    <script src="js/hello.js"></script>
 </body>
