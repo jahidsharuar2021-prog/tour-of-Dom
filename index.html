@@ -1,86 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour of Dom</title>
-    <link rel="stylesheet" href="styes/styles.css">
+  <link rel="stylesheet" href="styles/style.css">
     <style>
-        h1{
-            color: red;
-        }
-        #food-title{
-            color:aqua;
-        }
+      .header {
+        color: red;
+      }
+      .fontcol{
+        color:blue;
+      }
+      #food-title {
+        color: aqua;
+      }
     </style>
-</head>
-<body>
-   <header>
-    <h1>This is my header no banner</h1>
-   </header> 
-   <main id="section-1">
-    <h1>welcome to Dom</h1>
-    <p>Lorem ipsum dolor sit amet <span>Jahid hasan</span>consectetur, adipisicing elit. Repudiandae, eum.</p>
-    <p>I am not a good man <span>So aboide me</span></p>
-    <ul>
+  </head>
+  <body>
+    <header>
+      <h1 class="header">This is my header no banner</h1>
+      <h1 class="header">This is my header no banner</h1>
+    </header>
+    <main id="section-1">
+      <h1>welcome to Dom</h1>
+      <p>
+        Lorem ipsum dolor sit amet <span>Jahid hasan</span>consectetur,
+        adipisicing elit. Repudiandae, eum.
+      </p>
+      <p>I am not a good man <span>So aboide me</span></p>
+      <ul>
         <li>Shafayet</li>
         <li>bonobash</li>
         <li>jalali set</li>
-    </ul>
+      </ul>
     </main>
 
     <section id="section-2">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, illo?</p>
-        <h1 id="food-title">Foods I loves</h1>
-        <ul id="listband">Rice</ul>
-        <ul>potato</ul>
-        <ul>Fish</ul>
-        <ul class="foreign">lentils</ul>
-        <ul class="foreign">burger</ul>
-        <ul class="foreign">pizza</ul>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, illo?
+      </p>
+
+      <h1 id="foodtitle">Foods I loves</h1>
+      <ul id="listband">
+        Rice
+      </ul>
+      <ul class="fontcol">
+        potato
+      </ul>
+      <ul class="golden-fish">
+        Fish
+      </ul>
+      <ul class="foreign">
+        lentils
+      </ul>
+      <ul class="foreign">
+        burger
+      </ul>
+      <ul class="foreign">
+        pizza
+      </ul>
     </section>
-   
-   <script>
-    // console.log("Hello bole sole gelo ar ailo na");
-    // console.log("Javascript ar kela sure hoye gelo");\
-    // console.log("Dom=Document object model");
-    const student={
-        name:'Abul Mia',
-        id:121,
-        study:function(subject){
-            console.log("your subject is=",subject);
-        }
-    }
-    const lilocation=document.getElementsByTagName('li');
-    console.log(lilocation);
-    for(const li of lilocation){
-        console.log(li.innerText );
-    }
-    const header=document.getElementsByTagName('h1');
-    for(const h of header){
-        console.log(h.innerText);
-    }
-    const food=document.getElementById('food-title');
-    console.log(food.innerText);
-    food.innerText='Food makes extra large';
-    // for(const food of food){
-    //     console.log(food);
-    // }
-    // listband.innerText='pulao';
-    const foreigncls=document.getElementsByClassName('foreign');
-    console.log(foreigncls);
-    for(const foreignclasses of foreigncls){
-        console.log(foreignclasses.innerText);
-    }
-    const sectionpart=document.querySelectorAll('#section-1 p span');
-    console.log(sectionpart);
-    for(const sect of sectionpart){
-        console.log(sect.innerText);
-    }
-    const sectionp=document.querySelector('#section-1 p span');
-    console.log(sectionp);
-   
-   </script>
-   <script src="js/hello.js"></script>
-</body>
+    <section id="players-container">
+        <h1>players</h1>
+        <ul>
+            <li>messi</li>
+            <li>pele</li>
+            <li>Ronaldo</li>
+            <li>Embape</li>
+        </ul>
+    </section>
+
+    <script>
+      // console.log("Hello bole sole gelo ar ailo na");
+      // console.log("Javascript ar kela sure hoye gelo");\
+      // console.log("Dom=Document object model");
+      const student = {
+        name: "Abul Mia",
+        id: 121,
+        study: function (subject) {
+          console.log("your subject is=", subject);
+        },
+      };
+      const lilocation = document.getElementsByTagName("li");
+    //   console.log(lilocation);
+      for (const li of lilocation) {
+        // console.log(li.innerText);
+      }
+      const header = document.getElementsByTagName("h1");
+      for (const h of header) {
+        // console.log(h.innerText);
+      }
+      const food = document.getElementById("foodtitle");
+    //   console.log(food.innerText);
+      food.innerText = "Food makes extra large";
+      // for(const food of food){
+      //     console.log(food);
+      // }
+      // listband.innerText='pulao';
+      const foreigncls = document.getElementsByClassName("foreign");
+    //   console.log(foreigncls);
+      for (const foreignclasses of foreigncls) {
+        // console.log(foreignclasses.innerText);
+      }
+      const sectionpart = document.querySelectorAll("#section-1 p span");
+    //   console.log(sectionpart);
+      for (const sect of sectionpart) {
+        // console.log(sect.innerText);
+      }
+      const sectionp = document.querySelector("#section-1 p span");
+    //   console.log(sectionp);
+
+      // console theke copy kora item gula
+      const foodname = document.getElementById("foodtitle");
+    //   console.log(foodname);
+      
+      foodname.style.padding = "50px";
+
+      foodname.style.backgroundColor = "gold";
+
+      foodname.style.borderRadius = "8px";
+
+      foodname.style.marginLeft = "100px";
+
+      foodname.style.justifyContent = "center";
+
+      foodname.style.textAlign = "center";
+    </script>
+    
+    <script src="js/cssin.js"></script>
+  </body>
 </html>
