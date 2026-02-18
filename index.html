@@ -13,8 +13,7 @@
 </head>
 <body>
    <header>
-    <h1>
-    <header>This is my header no banner</h1>
+    <h1>This is my header no banner</h1>
    </header> 
    <main>
     <h1>welcome to Dom</h1>
@@ -25,8 +24,25 @@
     </ul>
    </main>
    <script>
-    console.log("Hello bole sole gelo ar ailo na");
-    console.log("Javascript ar kela sure hoye gelo");
+    // console.log("Hello bole sole gelo ar ailo na");
+    // console.log("Javascript ar kela sure hoye gelo");\
+    // console.log("Dom=Document object model");
+    const student={
+        name:'Abul Mia',
+        id:121,
+        study:function(subject){
+            console.log("your subject is=",subject);
+        }
+    }
+    const lilocation=document.getElementsByTagName('li');
+    console.log(lilocation);
+    for(const li of lilocation){
+        console.log(li.innerText );
+    }
+    const header=document.getElementsByTagName('h1');
+    for(const h of header){
+        console.log(h.innerText);
+    }
    </script>
    <script src="js/hello.js"></script>
 </body>
