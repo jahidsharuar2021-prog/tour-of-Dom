@@ -9,6 +9,9 @@
         h1{
             color: red;
         }
+        #food-title{
+            color:aqua;
+        }
     </style>
 </head>
 <body>
@@ -22,6 +25,15 @@
         <li>bonobash</li>
         <li>jalali set</li>
     </ul>
+    <section>
+        <h1 id="food-title">Foods I loves</h1>
+        <ul id="listband">Rice</ul>
+        <ul>potato</ul>
+        <ul>Fish</ul>
+        <ul class="foreign">lentils</ul>
+        <ul class="foreign">burger</ul>
+        <ul class="foreign">pizza</ul>
+    </section>
    </main>
    <script>
     // console.log("Hello bole sole gelo ar ailo na");
@@ -42,6 +54,18 @@
     const header=document.getElementsByTagName('h1');
     for(const h of header){
         console.log(h.innerText);
+    }
+    const food=document.getElementById('food-title');
+    console.log(food.innerText);
+    food.innerText='Food makes extra large';
+    // for(const food of food){
+    //     console.log(food);
+    // }
+    listband.innerText='pulao';
+    const foreigncls=document.getElementsByClassName('foreign');
+    console.log(foreigncls);
+    for(const foreignclasses of foreigncls){
+        console.log(foreignclasses.innerText);
     }
    </script>
    <script src="js/hello.js"></script>
